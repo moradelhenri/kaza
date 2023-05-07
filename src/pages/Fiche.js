@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 //import Cards from "../components/Cards";
@@ -16,19 +7,20 @@ import ImageSlider from "../components/ImageSlider";
 import Tag from "../components/Tag";
 import Stars from "../components/Stars";
 import Accordion from "../components/Accordion";
+import Footer from "../components/Footer";
+
 function Fiche() {
   const [data, setData] = useState({});
   const { id } = useParams(); // fiche/id-de-la-fiche
   const tags = data && data.tags;
   const slides = data && data.pictures;
  
-  const Description = data.description 
+  const Description = data && data.description 
   const Equipments = data && data.equipments
   
  
   useEffect(() => {
-    axios
-      .get("../data/data.json")
+    axios.get("../data.json")
       .then((res) => {
         const ficheData = res.data.find((x) => x.id === id);
         console.log(ficheData);
@@ -72,24 +64,20 @@ function Fiche() {
   <div className="wapper_accordion">   
 
 <div className=" accordion">
-
- <div className="box-equipement">
+<div className="box-equipement">
+  
 <Accordion Title="Equipements" 
 
-Text={Equipments}
- /> </div>
+Text= { Equipments }
+   /> 
+  </div>
 
-
-
-
- <div className="box-description "> 
-
-
+<div className="box-description">
 <Accordion Title="Description" 
 
-Text={Description}
-/> </div>
-
+Text= { Description }
+/> 
+</div>
 
  </div> 
 
@@ -114,7 +102,10 @@ Text={Description}
         
       ) : null}
       ;
+      <div className="ok"></div>
+      <Footer/>
     </div> 
+    
   );
 }
 

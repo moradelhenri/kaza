@@ -8,14 +8,17 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import "../styles.css";
+import Footer from "../components/Footer";
 
 function Home() {
+  
   const [data, setData] = useState([]);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    axios
-      .get("data/data.json")
+  useEffect(() => 
+  {
+    
+   axios.get("../data.json") 
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -31,14 +34,17 @@ function Home() {
       <div className="herobox">
         <h1 className="legend">Chez vous, partout et ailleurs</h1>
       </div>
-<div className="box_section_galerie">
+   <div className="box_section_galerie">
       {data.map((data, id) => (
         <li key={data.id} onClick={() => handleCardClick(data.id)}>
           <Card cover={data.cover} title={data.title} />
         </li>
       ))}
 
+   
+
       </div>
+       <Footer/> 
     </section>
   );
 }

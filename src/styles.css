@@ -14,7 +14,8 @@ body {
 .App {
   padding: 4rem;
   display: flex;
-  flex-direction: column;
+   flex-direction: column; 
+
 }
 
 .flex {
@@ -90,9 +91,9 @@ section {
  .box_section_galerie { 
    display: grid; 
    grid-template-columns: repeat(3, 1fr); 
-   padding: 3rem; 
+  padding: 3rem; 
    background-color: #f2f2f2f2; 
-   border-radius: 30px;
+   border-radius: 30px; 
    margin-top: 2rem; 
    gap: 2rem; 
  } 
@@ -149,12 +150,12 @@ li {
 
 }
 #carrousel-container{
-
-display: block;
+width: min-content;
+display: grid;
   position: relative;
   width: 100%;
   height: 415px;
-  margin: 2% 0;
+  /* margin: 2% 0; */
   overflow: hidden;
 
 
@@ -165,7 +166,7 @@ display: block;
 
 display: flex;
   height: 415px;
-  margin: auto auto 30px auto;
+  /* margin: auto auto 30px auto; */
   position: relative;
   width: 100%;
 
@@ -175,7 +176,7 @@ display: flex;
   height: 415px;
   object-fit: cover;
 display:flex;
-  width: 100%;
+  width: 100%; 
   mix-blend-mode: normal;
 color:  #140c0c55;
 }
@@ -211,7 +212,7 @@ font-weight: 800px;
 }
 
 .name{
-  display: grid;
+  display: grid; 
 position: relative;
 height: 100%;
 width: 100%;
@@ -241,13 +242,14 @@ line-height: 142%;
 
    }
  .name-container-fill{
-display: grid;
-  /* grid-template-columns:repeat( 2  1fr); */
+display:inline-grid;
+  grid-template-columns:repeat( 2  1fr);
   grid-template-rows: 51px 26px 20px 25px 52px;  
 
-justify-content: space-between;
+/* justify-content: space-between; */
 }
 .name-container-title{
+  white-space: nowrap;
 display: grid;
 grid-area: 1/1;
 }
@@ -310,7 +312,7 @@ justify-content: end;
 }
 /* stars style */
 .starBox{
-  display:grid;
+display: inline-grid; 
   width: 195px;
 height: 36px;
 grid-area: 4/4;
@@ -319,8 +321,8 @@ justify-self: flex-end;
 
 .iconStyle{
 grid-area: 4/4;
-  display:grid;   
-  grid-auto-flow: column; 
+  display: inline-grid;   
+   grid-auto-flow: column;  
 margin-top: -1.4em;
 
 
@@ -329,5 +331,11 @@ margin-top: -1.4em;
 
   width: 24,75px;
   height: 24px;
+
+}
+.ok{
+
+width: 10rem;
+height: 10rem;
 
 }
