@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/kaza/static/css/main.fcc4d873.css",
-    "main.js": "/kaza/static/js/main.efe4c5bf.js",
+    "main.css": "/kaza/static/css/main.a29fd966.css",
+    "main.js": "/kaza/static/js/main.13ee9405.js",
+    "static/media/aPropos.png": "/kaza/static/media/aPropos.a01235c7cac4702f5edd.png",
     "static/media/IMG.png": "/kaza/static/media/IMG.efc1935eb81fc5e585f9.png",
     "index.html": "/kaza/index.html",
     "static/media/vector-right.svg": "/kaza/static/media/vector-right.88153a5d119c2744ffe34dca1ef843df.svg",
     "static/media/vector-left.svg": "/kaza/static/media/vector-left.19918a1634b1441a25ae0b50e6b1f85b.svg",
-    "main.fcc4d873.css.map": "/kaza/static/css/main.fcc4d873.css.map",
-    "main.efe4c5bf.js.map": "/kaza/static/js/main.efe4c5bf.js.map"
+    "main.a29fd966.css.map": "/kaza/static/css/main.a29fd966.css.map",
+    "main.13ee9405.js.map": "/kaza/static/js/main.13ee9405.js.map"
   },
   "entrypoints": [
-    "static/css/main.fcc4d873.css",
-    "static/js/main.efe4c5bf.js"
+    "static/css/main.a29fd966.css",
+    "static/js/main.13ee9405.js"
   ]
 }
